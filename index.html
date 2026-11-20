@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guide citoyen Dakhla Environnement : découvrez comment télécharger l'application, vous connecter par e-mail, envoyer un signalement et suivre son état.">
+    <title>Dakhla Environnement | Guide Citoyen & Application</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#accueil" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <span>Dakhla <strong>Environnement</strong></span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#accueil" class="nav-item">Accueil</a>
+                <a href="#fonctionnement" class="nav-item">Comment ça marche</a>
+                <a href="#suivi" class="nav-item">Suivi</a>
+                <a href="#installation" class="nav-item">Installation</a>
+                <!-- Mobile CTA -->
+                <a href="#installation" class="mobile-app-btn">
+                    Télécharger l'application <i class="fa-solid fa-download"></i>
+                </a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#installation" class="app-button">
+                    Télécharger l'app
+                    <i class="fa-solid fa-download"></i>
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" id="accueil">
+            <div class="hero-glow"></div>
+            <div class="container hero-container">
+                <div class="hero-content reveal">
+                    <div class="badge">
+                        <span class="pulse-dot"></span>
+                        PORTAIL D'INFORMATION CITOYEN • DAKHLA
+                    </div>
+
+                    <h1>
+                        Une ville plus propre.
+                        <span class="text-gradient">Un geste citoyen simple.</span>
+                    </h1>
+
+                    <p>
+                        Bienvenue sur le guide officiel de l'application <strong>Dakhla Environnement</strong>. Découvrez comment installer l'application, signaler un problème environnemental en quelques secondes et suivre son traitement.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#installation" class="primary-button">
+                            Télécharger et installer
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+
+                        <a href="#fonctionnement" class="secondary-button">
+                            Découvrir le fonctionnement
+                        </a>
+                    </div>
+
+                    <!-- Info Notice -->
+                    <div class="info-banner">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span>Ce site est un guide explicatif. Toutes les actions s'effectuent directement depuis l'application mobile.</span>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal">
+                    <div class="visual-card">
+                        <i class="fa-solid fa-mobile-screen-button main-phone"></i>
+                        <div class="floating-badge badge-1">
+                            <i class="fa-solid fa-camera"></i> Photo + GPS
+                        </div>
+                        <div class="floating-badge badge-2">
+                            <i class="fa-solid fa-envelope-circle-check"></i> Code à 6 chiffres
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS SECTION (3 MAIN STEPS) -->
+        <section class="steps-section section" id="fonctionnement">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">GUIDE D'UTILISATION</span>
+                    <h2>Comment utiliser l'application ?</h2>
+                    <p>
+                        L'application a été conçue pour être rapide, intuitive et accessible à tous les citoyens de Dakhla, sans création de compte complexe.
+                    </p>
+                </div>
+
+                <div class="steps-grid">
+                    <!-- ÉTAPE 1 : CONNEXION -->
+                    <article class="step-card reveal">
+                        <div class="step-number">01</div>
+                        <div class="step-icon">
+                            <i class="fa-solid fa-key"></i>
+                        </div>
+                        <h3>Connexion par E-mail & Code</h3>
+                        <p>
+                            Aucun mot de passe à retenir. Pour accéder à l'application :
+                        </p>
+                        <ul class="step-list">
+                            <li><i class="fa-solid fa-check"></i> Saisissez votre <strong>adresse e-mail</strong>.</li>
+                            <li><i class="fa-solid fa-check"></i> Recevez instantanément un <strong>code de vérification à 6 chiffres</strong>.</li>
+                            <li><i class="fa-solid fa-check"></i> Entrez le code pour valider votre accès en toute sécurité.</li>
+                        </ul>
+                    </article>
+
+                    <!-- ÉTAPE 2 : ENVOI DE SIGNALEMENT -->
+                    <article class="step-card reveal">
+                        <div class="step-number">02</div>
+                        <div class="step-icon">
+                            <i class="fa-solid fa-camera-retro"></i>
+                        </div>
+                        <h3>Envoyer un signalement</h3>
+                        <p>
+                            Vous constatez un problème environnemental ? Signalez-le en 4 éléments simples :
+                        </p>
+                        <ul class="step-list">
+                            <li><i class="fa-solid fa-camera"></i> <strong>Une photo :</strong> prenez le problème en photo sur place.</li>
+                            <li><i class="fa-solid fa-location-dot"></i> <strong>La localisation :</strong> position automatique ou manuelle.</li>
+                            <li><i class="fa-solid fa-tags"></i> <strong>Le type :</strong> déchets, éclairage, espace vert, etc.</li>
+                            <li><i class="fa-solid fa-pen"></i> <strong>Une description :</strong> facultative pour ajouter des détails.</li>
+                        </ul>
+                    </article>
+
+                    <!-- ÉTAPE 3 : SUIVI -->
+                    <article class="step-card reveal">
+                        <div class="step-number">03</div>
+                        <div class="step-icon">
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+                        <h3>Suivre via « Mes signalements »</h3>
+                        <p>
+                            Restez informé de l'évolution de vos contributions citoyennes à tout moment :
+                        </p>
+                        <ul class="step-list">
+                            <li><i class="fa-solid fa-check"></i> Ouvrez l'onglet <strong>« Mes signalements »</strong> dans l'application.</li>
+                            <li><i class="fa-solid fa-check"></i> Consultez l'historique de tous vos envois.</li>
+                            <li><i class="fa-solid fa-check"></i> Vérifiez le <strong>statut en temps réel</strong> de chaque dossier.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUIVI DETAIL SECTION ("MES SIGNALEMENTS") -->
+        <section class="tracking-section section" id="suivi">
+            <div class="container tracking-container">
+                <div class="tracking-content reveal">
+                    <span class="section-label">TRANSPARENCE & SUIVI</span>
+                    <h2>Comprendre l'espace « Mes signalements »</h2>
+                    <p>
+                        Une fois votre signalement envoyé depuis l'application, il apparaît automatiquement dans votre rubrique personnelle <strong>« Mes signalements »</strong>. Vous pouvez y suivre chaque étape de sa prise en charge grâce à des indicateurs clairs :
+                    </p>
+
+                    <div class="status-examples">
+                        <div class="status-item">
+                            <span class="status-badge pending">
+                                <i class="fa-solid fa-clock"></i> En attente
+                            </span>
+                            <p>Votre signalement a bien été reçu et attend d'être examiné.</p>
+                        </div>
+
+                        <div class="status-item">
+                            <span class="status-badge progress">
+                                <i class="fa-solid fa-spinner"></i> En cours
+                            </span>
+                            <p>Les équipes concernées ont pris en charge le signalement.</p>
+                        </div>
+
+                        <div class="status-item">
+                            <span class="status-badge resolved">
+                                <i class="fa-solid fa-circle-check"></i> Résolu
+                            </span>
+                            <p>L'intervention est terminée et le problème a été réglé.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Illustration visuelle non-interactive de l'interface -->
+                <div class="mockup-wrapper reveal">
+                    <div class="phone-mockup">
+                        <div class="mockup-header">
+                            <span>Aperçu de la rubrique</span>
+                            <strong>Mes signalements</strong>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mock-card">
+                                <div class="mock-top">
+                                    <span class="mock-type"><i class="fa-solid fa-trash-can"></i> Dépôt de déchets</span>
+                                    <span class="mock-tag tag-green">Résolu</span>
+                                </div>
+                                <p class="mock-loc"><i class="fa-solid fa-location-dot"></i> Quartier Al Massira, Dakhla</p>
+                            </div>
+
+                            <div class="mock-card">
+                                <div class="mock-top">
+                                    <span class="mock-type"><i class="fa-solid fa-tree"></i> Espace vert</span>
+                                    <span class="mock-tag tag-amber">En cours</span>
+                                </div>
+                                <p class="mock-loc"><i class="fa-solid fa-location-dot"></i> Boulevard Mohammed V</p>
+                            </div>
+
+                            <div class="mock-card">
+                                <div class="mock-top">
+                                    <span class="mock-type"><i class="fa-solid fa-water"></i> Fuite d'eau</span>
+                                    <span class="mock-tag tag-gray">En attente</span>
+                                </div>
+                                <p class="mock-loc"><i class="fa-solid fa-location-dot"></i> Avenue Al Walae</p>
+                            </div>
+                        </div>
+                        <div class="mockup-footer">
+                            <i class="fa-solid fa-eye"></i> Aperçu illustratif de l'application
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOWNLOAD & INSTALLATION SECTION -->
+        <section class="download-section section" id="installation">
+            <div class="container">
+                <div class="download-box reveal">
+                    <div class="download-glow"></div>
+                    <div class="download-header">
+                        <span class="section-label light">TÉLÉCHARGEMENT & INSTALLATION</span>
+                        <h2>Installez Dakhla Environnement sur votre appareil</h2>
+                        <p>
+                            Téléchargez le package officiel de l'application et suivez les étapes ci-dessous pour l'installer facilement.
+                        </p>
+                    </div>
+
+                    <!-- Guide d'installation en 4 étapes -->
+                    <div class="install-steps">
+                        <div class="install-step">
+                            <div class="install-num">1</div>
+                            <h4>Télécharger</h4>
+                            <p>Cliquez sur le bouton ci-dessous pour récupérer le fichier <strong>.ZIP</strong>.</p>
+                        </div>
+
+                        <div class="install-step">
+                            <div class="install-num">2</div>
+                            <h4>Extraire le fichier</h4>
+                            <p>Ouvrez vos téléchargements et décompressez (extrayez) le dossier ZIP.</p>
+                        </div>
+
+                        <div class="install-step">
+                            <div class="install-num">3</div>
+                            <h4>Lancer l'installation</h4>
+                            <p>Ouvrez le fichier d'installation contenu dans le dossier extrait.</p>
+                        </div>
+
+                        <div class="install-step">
+                            <div class="install-num">4</div>
+                            <h4>Se connecter</h4>
+                            <p>Ouvrez l'application et entrez votre e-mail pour recevoir votre code à 6 chiffres.</p>
+                        </div>
+                    </div>
+
+                    <div class="download-actions">
+                        <a href="application/dakhla-environment.zip" class="download-button" download>
+                            <i class="fa-solid fa-download"></i>
+                            Télécharger l'application (ZIP)
+                        </a>
+                    </div>
+
+                    <div class="download-meta">
+                        <span><i class="fa-solid fa-file-zipper"></i> Format : Archive ZIP</span>
+                        <span>•</span>
+                        <span><i class="fa-solid fa-shield-halved"></i> Package officiel</span>
+                        <span>•</span>
+                        <span><i class="fa-solid fa-circle-question"></i> Gratuit pour tous les citoyens</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#accueil" class="footer-logo">
+                    <i class="fa-solid fa-leaf"></i>
+                    Dakhla Environnement
+                </a>
+
+                <p>
+                    Guide d'information citoyen pour l'utilisation de l'application mobile Dakhla Environnement.
+                </p>
+
+                <div class="footer-links">
+                    <a href="#accueil">Accueil</a>
+                    <a href="#fonctionnement">Comment ça marche</a>
+                    <a href="#suivi">Suivi</a>
+                    <a href="#installation">Installation</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    &copy; <span id="year">2026</span> Dakhla Environnement. Tous droits réservés.
+                </p>
+                <button id="backToTop" class="back-to-top" aria-label="Retour en haut">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+</body>
+
+</html>
