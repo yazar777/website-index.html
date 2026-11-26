@@ -12,37 +12,35 @@ document.addEventListener("DOMContentLoaded", () => {
         yearSpan.textContent = new Date().getFullYear();
     }
 
+    // Helpers menu mobile
+    const openIcon = () => {
+        menuIcon.classList.remove("fa-bars");
+        menuIcon.classList.add("fa-xmark");
+    };
+    const closeIcon = () => {
+        menuIcon.classList.remove("fa-xmark");
+        menuIcon.classList.add("fa-bars");
+    };
+    const closeMenu = () => {
+        navLinks.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        closeIcon();
+    };
+
     // 2. Menu Mobile (Ouverture / Fermeture)
     menuToggle.addEventListener("click", () => {
         const isOpen = navLinks.classList.toggle("active");
         menuToggle.setAttribute("aria-expanded", isOpen);
-
-        if (isOpen) {
-            menuIcon.classList.remove("fa-bars");
-            menuIcon.classList.add("fa-xmark");
-        } else {
-            menuIcon.classList.remove("fa-xmark");
-            menuIcon.classList.add("fa-bars");
-        }
+        isOpen ? openIcon() : closeIcon();
     });
 
     // 3. Fermer le menu mobile après un clic sur un lien
-    navItems.forEach((link) => {
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("active");
-            menuToggle.setAttribute("aria-expanded", "false");
-            menuIcon.classList.remove("fa-xmark");
-            menuIcon.classList.add("fa-bars");
-        });
-    });
+    navItems.forEach((link) => link.addEventListener("click", closeMenu));
 
     // 4. Fermer le menu mobile si l'utilisateur clique en dehors
     document.addEventListener("click", (e) => {
         if (!navbar.contains(e.target) && navLinks.classList.contains("active")) {
-            navLinks.classList.remove("active");
-            menuToggle.setAttribute("aria-expanded", "false");
-            menuIcon.classList.remove("fa-xmark");
-            menuIcon.classList.add("fa-bars");
+            closeMenu();
         }
     });
 
@@ -84,9 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         },
-        {
-            threshold: 0.12,
-        }
+        { threshold: 0.12 }
     );
 
     revealElements.forEach((el) => revealObserver.observe(el));
@@ -94,10 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 7. Bouton retour en haut
     if (backToTop) {
         backToTop.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-            });
+            window.scrollTo({ top: 0, behavior: "smooth" });
         });
     }
 });
