@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dakhla Review — Confidentialité</title>
+<meta name="theme-color" content="#165c38">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+<style>
+.doc{max-width:780px;margin:0 auto;padding:40px 0 72px}
+.doc h1{font-size:clamp(30px,5vw,44px);margin:0 0 10px}
+.doc .upd{color:var(--mute);font-size:14px;margin:0 0 30px}
+.doc section{padding:0;margin:0 0 26px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 26px}
+.doc h2{font-size:21px;margin:0 0 8px;color:var(--g1)}
+:root[data-theme="dark"] .doc h2{color:#7fd9a6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .doc h2{color:#7fd9a6}}
+.doc p,.doc li{color:var(--ink);font-size:16.5px;margin:0 0 8px}
+.doc ul{margin:0;padding-inline-start:22px}
+.back{display:inline-flex;align-items:center;gap:8px;color:var(--g1);font-weight:800;text-decoration:none;margin-bottom:18px}
+:root[data-theme="dark"] .back{color:#7fd9a6}
+.ph{background:var(--gold);color:var(--goldink);padding:1px 8px;border-radius:6px;font-weight:700}
+</style>
+</head>
+<body>
+<div class="nav-wrap"><div class="wrap"><header>
+  <a href="index.html" class="brand"><span class="logo brand-logo"><img src="logo.png" alt="" onerror="this.style.display='none'"></span><span>Dakhla Review</span></a>
+  <div class="controls"><div class="lang" role="group" aria-label="Language"><button data-l="fr">FR</button><button data-l="en">EN</button><button data-l="ar">العربية</button></div></div>
+</header></div></div>
+
+<main class="wrap"><article class="doc">
+  <a class="back" href="index.html" id="back"></a>
+  <h1 id="t"></h1>
+  <p class="upd" id="u"></p>
+  <div id="body"></div>
+</article></main>
+
+<script>
+var P="<span class='ph'>[Nom du responsable du traitement]</span>";
+var C={
+fr:{back:"← Retour au site",t:"Confidentialité",u:"Ce que l’application fait de vos données, en clair.",s:[
+["Ce que vous nous donnez",["Votre adresse e-mail, pour vous connecter avec un code à 6 chiffres.","Vos signalements : la photo, le lieu, le type de problème et, si vous le souhaitez, une courte description.","Votre position, uniquement au moment où vous envoyez un signalement."]],
+["Ce que nous ne demandons pas",["Pas de mot de passe.","Pas de numéro de carte d’identité.","Pas de suivi de position en arrière-plan."]],
+["Vos photos",["Les données de localisation cachées dans la photo sont supprimées avant l’envoi."]],
+["Qui voit quoi",["Les agents qui examinent les signalements ne voient pas votre nom."]],
+["Supprimer votre compte",["Vous pouvez supprimer votre compte depuis l’application, à tout moment.","Vos signalements restent, sans rien qui vous identifie, pour être traités jusqu’au bout."]],
+["Où sont les données",["Elles sont hébergées chez un fournisseur cloud dans l’Union européenne (Irlande)."]],
+["Limite d’usage",["Chaque compte peut envoyer au maximum 10 signalements par jour, pour garder des signalements utiles."]],
+["Contact",["Responsable : "+P,"Pour toute question : <a href='mailto:contact@example.com'>contact@example.com</a>"]]]},
+en:{back:"← Back to the site",t:"Privacy",u:"What the app does with your data, in plain words.",s:[
+["What you give us",["Your email address, to sign in with a 6-digit code.","Your reports: the photo, the place, the type of problem and, if you like, a short description.","Your location, only when you send a report."]],
+["What we don’t ask for",["No password.","No ID card number.","No location tracking in the background."]],
+["Your photos",["Location data hidden inside the photo is removed before it is sent."]],
+["Who sees what",["Staff who review reports don’t see your name."]],
+["Deleting your account",["You can delete your account from the app at any time.","Your reports stay, with nothing that identifies you, so they can be completed."]],
+["Where the data is",["It is stored with a cloud provider in the European Union (Ireland)."]],
+["Usage limit",["Each account can send up to 10 reports per day, to keep reports useful."]],
+["Contact",["Controller: "+P,"For any question: <a href='mailto:contact@example.com'>contact@example.com</a>"]]]},
+ar:{back:"← العودة إلى الموقع",t:"الخصوصية",u:"ماذا يفعل التطبيق ببياناتك، بوضوح.",s:[
+["ما تقدّمه لنا",["بريدك الإلكتروني، للدخول برمز من 6 أرقام.","بلاغاتك: الصورة والمكان ونوع المشكل ووصف قصير إن أردت.","موقعك، فقط عند إرسال البلاغ."]],
+["ما لا نطلبه",["لا كلمة مرور.","لا رقم بطاقة التعريف.","لا تتبّع للموقع في الخلفية."]],
+["صورك",["تُحذف بيانات الموقع المخفية داخل الصورة قبل إرسالها."]],
+["من يرى ماذا",["لا يرى اسمك من يراجع البلاغات."]],
+["حذف حسابك",["يمكنك حذف حسابك من التطبيق في أي وقت.","تبقى بلاغاتك دون أي معلومة تدل عليك، حتى تُكمَل معالجتها."]],
+["أين توجد البيانات",["تُحفظ لدى مزوّد سحابي في الاتحاد الأوروبي (أيرلندا)."]],
+["حدّ الاستعمال",["حدّ أقصى 10 بلاغات في اليوم لكل حساب، للحفاظ على جودة البلاغات."]],
+["تواصل",["المسؤول: "+P,"لأي سؤال: <a href='mailto:contact@example.com'>contact@example.com</a>"]]]}};
+function setLang(l){
+  var d=C[l]||C.fr; l=C[l]?l:"fr";
+  document.documentElement.lang=l; document.documentElement.dir=l==="ar"?"rtl":"ltr";
+  document.getElementById("back").textContent=d.back;
+  document.getElementById("t").textContent=d.t; document.getElementById("u").textContent=d.u;
+  document.title="Dakhla Review — "+d.t;
+  document.getElementById("body").innerHTML=d.s.map(function(x){return "<section><h2>"+x[0]+"</h2>"+(x[1].length>1&&x[0].indexOf("Contact")<0&&x[0]!=="تواصل"?"<ul><li>"+x[1].join("</li><li>")+"</li></ul>":x[1].map(function(p){return "<p>"+p+"</p>"}).join(""))+"</section>"}).join("");
+  document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.l===l)});
+  try{localStorage.setItem("dr-lang",l)}catch(e){}
+}
+document.querySelectorAll(".lang button").forEach(function(b){b.onclick=function(){setLang(b.dataset.l)}});
+var th=null,lg="fr";try{th=localStorage.getItem("dr-theme");lg=localStorage.getItem("dr-lang")||"fr"}catch(e){}
+if(th)document.documentElement.setAttribute("data-theme",th);
+setLang(lg);
+</script>
+</body>
+</html>
